@@ -63,6 +63,10 @@ export default ContactForm
 
 
 ContactForm.propTypes = {
-    contacts: PropTypes.arrayOf(PropTypes.any.isRequired),
+    contacts: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+  })),
     createContact: PropTypes.func.isRequired,
 }

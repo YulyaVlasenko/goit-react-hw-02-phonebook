@@ -1,16 +1,14 @@
-import { Component } from "react";
-import PropTypes from 'prop-types';
 
-class Filter extends Component {
-    render() {
-        const {title, value, handleChangeFilter} = this.props
-        return ( 
-            <form>
-                <label htmlFor="#">{title}: </label>
-                <input type="text" name="filter" onChange={handleChangeFilter} value={value}/>
-            </form>
-        )
-    }
+import PropTypes from 'prop-types';
+import React from 'react'
+
+export const Filter = ({title, value, handleChangeFilter}) => {
+  return (
+      <form>
+          <label htmlFor="#">{title}: </label>
+          <input type="text" name="filter" onChange={handleChangeFilter} value={value} />
+      </form>
+  )
 }
 
 export default Filter
